@@ -1,0 +1,3 @@
+Things TODO:
+Be able to store information (name & businessID)
+Be able to store array or list (all info regarding general information)
