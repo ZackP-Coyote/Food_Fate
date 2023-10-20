@@ -25,7 +25,7 @@ response = requests.get(url = ENDPOINT, params= PARAMETERS, headers= Headers)
 
 #convert JSON from yelp to python
 business_data = response.json()
-print(business_data, "/n")
+print(business_data)
 
 
 #Full List of Params
