@@ -1,0 +1,6 @@
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.AssemblyReference.cache
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CoreCompileInputs.cache
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.pdb
