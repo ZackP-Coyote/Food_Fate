@@ -30,6 +30,9 @@ namespace Food_Fate_BLL
 
             return argon2.GetBytes(16);
         }
+
+        //used during registration to create the initial hashed password and it's salt as strings
+        //stored in the DB as strings but will then need to be converted back to byte arrays
         public string[] CreateHash(string password)
         {
             var salt = CreateSalt();
@@ -42,7 +45,8 @@ namespace Food_Fate_BLL
             return authentication;
         }
 
-        //password and salt saved as strings so when retrieved run a Encoding.Unicode.GetBytes(string) for VerifyHash function
+        //used during login to verify password 
+        //password and salt saved as strings so when retrieved from DB run a Encoding.Unicode.GetBytes(string) to be able to input them into the VerifyHash function
         public bool VerifyHash(string password, byte[] hash, byte[] salt)
         {
             var newHash = HashPassword(password, salt);
