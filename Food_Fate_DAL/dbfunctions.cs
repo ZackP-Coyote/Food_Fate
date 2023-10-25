@@ -11,6 +11,7 @@ namespace Food_Fate_DAL
 {
     public class dbfunctions
     {
+        //returns 1 when able to add user. returns 0 if not able to. returns -2 if email already in DB
         public int DBSignUp(string userEmail, string userName, string hashedPassword, string hashSalt)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
@@ -46,6 +47,7 @@ namespace Food_Fate_DAL
             }
         }
 
+        //Adds a userID, restID pairing to the database and returns 1 if it works, 0 if it doesn't
         public int DBFavorite(int userID, string restID/*, string restName, string restDescription, string restImage*/)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
@@ -59,6 +61,7 @@ namespace Food_Fate_DAL
             }
         }
 
+        //returns the userID as an int
         public int GetUserID(string userEmail) 
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
@@ -80,6 +83,8 @@ namespace Food_Fate_DAL
             }
         }
 
+        //returns a SqlDataReader variable with userEmail at index 0, userName at 1, and userImage at 2
+        //if needed I can change it so it can return a string[] with the values at the same index
         public SqlDataReader GetUserInfo(int userID)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
@@ -94,6 +99,7 @@ namespace Food_Fate_DAL
             }
         }
         
+        //returns a SqlDataReader of x favorites starting at an index of 0
         public SqlDataReader GetFavorites(int userID)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
