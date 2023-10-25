@@ -73,3 +73,15 @@ C:\Users\brand\source\repos\Food_Fate\Food_Fate\obj\Debug\Food_Fate-UI.csproj.Co
 C:\Users\brand\source\repos\Food_Fate\Food_Fate\obj\Debug\Food_Fate-UI.csproj.CopyComplete
 C:\Users\brand\source\repos\Food_Fate\Food_Fate\obj\Debug\Food_Fate.dll
 C:\Users\brand\source\repos\Food_Fate\Food_Fate\obj\Debug\Food_Fate.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Memory.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Numerics.Vectors.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Buffers.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Konscious.Security.Cryptography.Argon2.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Memory.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Konscious.Security.Cryptography.Blake2.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Numerics.Vectors.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Buffers.xml

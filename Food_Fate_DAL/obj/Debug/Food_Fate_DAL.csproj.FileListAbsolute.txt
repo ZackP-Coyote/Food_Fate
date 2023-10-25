@@ -4,3 +4,16 @@ C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.cspr
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CoreCompileInputs.cache
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.dll
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Buffers.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Memory.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Argon2.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Blake2.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Buffers.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Memory.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CopyComplete

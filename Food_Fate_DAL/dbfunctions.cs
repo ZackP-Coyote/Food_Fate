@@ -11,7 +11,7 @@ namespace Food_Fate_DAL
 {
     public class dbfunctions
     {
-        public int SignUp(string userEmail, string userName, string hashedPassword)
+        public int DBSignUp(string userEmail, string userName, string hashedPassword, string hashSalt)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
@@ -36,7 +36,8 @@ namespace Food_Fate_DAL
 
                 int userID = GetUserID(userEmail);
 
-                using (var cmd = new SqlCommand("insert into AuthTable values ("+userID+", '"+hashedPassword+"')", conn))
+                //password and salt saved as strings so when retrieved run a Encoding.Unicode.GetBytes(string) for VerifyHash function
+                using (var cmd = new SqlCommand("insert into AuthTable values ("+userID+", '"+hashedPassword+"', '"+hashSalt+",)", conn))
                 {
                     conn.Open();
                     int response = cmd.ExecuteNonQuery();
@@ -45,7 +46,7 @@ namespace Food_Fate_DAL
             }
         }
 
-        public int Favorite(int userID, string restID/*, string restName, string restDescription, string restImage*/)
+        public int DBFavorite(int userID, string restID/*, string restName, string restDescription, string restImage*/)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
@@ -92,7 +93,7 @@ namespace Food_Fate_DAL
                 }
             }
         }
-
+        
         public SqlDataReader GetFavorites(int userID)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
@@ -103,6 +104,37 @@ namespace Food_Fate_DAL
                     conn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     return dr;
+                }
+            }
+        }
+
+        //function to retrieve the hashed password and salt which will then be made into byte[] for VerifyHash function
+        public string[] RetrieveHashSalt(string userEmail)
+        {
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                int userID = GetUserID(userEmail);
+                using (var cmd = new SqlCommand("select userPassword, userSalt from AuthTable where userID='" + userID + "'", conn))
+                {
+                    string hash;
+                    string salt;
+                    string[] strings = new string[2];
+
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        hash = dr.GetString(0);
+                        salt = dr.GetString(1);
+                    }
+                    else
+                    {
+                        return strings;
+                    }
+                    strings[0] = hash;
+                    strings[1] = salt;
+                    return strings;
                 }
             }
         }
