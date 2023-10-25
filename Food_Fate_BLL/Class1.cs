@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Food_Fate_BLL
 {
-    public class Class1
+    internal class Class1
     {
     }
 }
