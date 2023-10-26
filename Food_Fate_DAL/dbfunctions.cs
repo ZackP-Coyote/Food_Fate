@@ -16,7 +16,7 @@ namespace Food_Fate_DAL
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
-                using (var cmd = new SqlCommand("select * from UserInfo where userEmail='"+userEmail+"'"))
+                using (var cmd = new SqlCommand("select * from UserInfo where userEmail='" + userEmail + "'"))
                 {
                     conn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -25,8 +25,8 @@ namespace Food_Fate_DAL
                         return -2;
                     }
                 }
-                using (var cmd = new SqlCommand("insert into UserInfo values (0, '"+userEmail+ "', '"+userName+"', 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/profile-design-template-4c23db68ba79c4186fbd258aa06f48b3_screen.jpg?ts=1581063859')", conn)) 
-                { 
+                using (var cmd = new SqlCommand("insert into UserInfo values (0, '" + userEmail + "', '" + userName + "', 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/profile-design-template-4c23db68ba79c4186fbd258aa06f48b3_screen.jpg?ts=1581063859')", conn))
+                {
                     conn.Open();
                     int response = cmd.ExecuteNonQuery();
                     if (response == 0)
@@ -38,12 +38,12 @@ namespace Food_Fate_DAL
                 int userID = GetUserID(userEmail);
 
                 //password and salt saved as strings so when retrieved run a Encoding.Unicode.GetBytes(string) for VerifyHash function
-                using (var cmd = new SqlCommand("insert into AuthTable values ("+userID+", '"+hashedPassword+"', '"+hashSalt+",)", conn))
+                using (var cmd = new SqlCommand("insert into AuthTable values (" + userID + ", '" + hashedPassword + "', '" + hashSalt + "')", conn))
                 {
                     conn.Open();
                     int response = cmd.ExecuteNonQuery();
                     return response;
-                }    
+                }
             }
         }
 
@@ -52,7 +52,7 @@ namespace Food_Fate_DAL
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
-                using (var cmd = new SqlCommand("insert into FavRest values ("+userID+", '"+restID+"')"/*, '"+restName+"', '"+restDescription+ "', '"+restImage+"')"*/, conn))
+                using (var cmd = new SqlCommand("insert into FavRest values (" + userID + ", '" + restID + "')"/*, '"+restName+"', '"+restDescription+ "', '"+restImage+"')"*/, conn))
                 {
                     conn.Open();
                     int response = cmd.ExecuteNonQuery();
@@ -62,11 +62,11 @@ namespace Food_Fate_DAL
         }
 
         //returns the userID as an int
-        public int GetUserID(string userEmail) 
+        public int GetUserID(string userEmail)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
-                using (var cmd = new SqlCommand("select userID from UserInfo where userEmail='"+userEmail+"'", conn))
+                using (var cmd = new SqlCommand("select userID from UserInfo where userEmail='" + userEmail + "'", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.Text;
                     conn.Open();
@@ -74,7 +74,7 @@ namespace Food_Fate_DAL
                     if (dr.Read())
                     {
                         return dr.GetInt32(0);
-                    }   
+                    }
                     else
                     {
                         return -1;
@@ -89,7 +89,7 @@ namespace Food_Fate_DAL
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
-                using (var cmd = new SqlCommand("select userEmail, userName, userImage from UserInfo where userID="+userID+"", conn))
+                using (var cmd = new SqlCommand("select userEmail, userName, userImage from UserInfo where userID=" + userID + "", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.Text;
                     conn.Open();
@@ -98,13 +98,13 @@ namespace Food_Fate_DAL
                 }
             }
         }
-        
+
         //returns a SqlDataReader of x favorites starting at an index of 0
         public SqlDataReader GetFavorites(int userID)
         {
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
-                using (var cmd = new SqlCommand("select restID from FavRest where userID='"+userID+"'", conn))
+                using (var cmd = new SqlCommand("select restID from FavRest where userID='" + userID + "'", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.Text;
                     conn.Open();
@@ -141,6 +141,85 @@ namespace Food_Fate_DAL
                     strings[0] = hash;
                     strings[1] = salt;
                     return strings;
+                }
+            }
+        }
+
+        //UpdatesUserInfo with new values. if email is updated to an email in use returns -2
+        //returns 0 if unable to update, 1 if able to
+        public int UpdateUserInfo(int userID, string userEmail, string userName, string userImage)
+        {
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                using (var cmd = new SqlCommand("select * from UserInfo where userEmail='" + userEmail + "' and userID !=" + userID + ""))
+                {
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        return -2;
+                    }
+                }
+
+                using (var cmd = new SqlCommand("update UserInfo set userEmail='" + userEmail + "', userName='" + userName + "', userImage='" + userImage + "' where userID=" + userID + "", conn))
+                {
+                    conn.Open();
+                    int response = cmd.ExecuteNonQuery();
+                    return response;
+                }
+            }
+        }
+
+        //updates Password returns 1 if able to 0 if not
+        public int UpdatePassword(int userID, string hashedPassword, string hashSalt)
+        {
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                using (var cmd = new SqlCommand("update AuthTable set userPassword='" + hashedPassword + "', userSalt='" + hashSalt + "' where userID=" + userID + "", conn))
+                {
+                    conn.Open();
+                    int response = cmd.ExecuteNonQuery();
+                    return response;
+                }
+            }
+        }
+
+        //returns 1 if able to. returns 0 if userID doesn't exist
+        public int DeleteUser(int userID)
+        {
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                using (var cmd = new SqlCommand("delete from AuthTable where userID=" + userID + "", conn))
+                {
+                    conn.Open();
+                    int response = cmd.ExecuteNonQuery();
+                }
+
+                using (var cmd = new SqlCommand("delete from FavRest where userID=" + userID + "", conn))
+                {
+                    conn.Open();
+                    int response = cmd.ExecuteNonQuery();
+                }
+
+                using (var cmd = new SqlCommand("delete from UserInfo where userID="+userID+"", conn))
+                {
+                    conn.Open();
+                    int response = cmd.ExecuteNonQuery();
+                    return response;
+                }
+            }
+        }
+
+        //returns 1 if able to. returns 0 if not
+        public int DBRemoveFavorite(int userID, string favID)
+        {
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                using (var cmd = new SqlCommand("delete from FavRest where userID=" + userID + " and restID='"+favID+"'", conn))
+                {
+                    conn.Open();
+                    int response = cmd.ExecuteNonQuery();
+                    return response;
                 }
             }
         }
