@@ -17,3 +17,10 @@ C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Memory.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CopyComplete
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.dll.config
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\MySqlConnector.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\MySqlConnector.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Threading.Tasks.Extensions.xml

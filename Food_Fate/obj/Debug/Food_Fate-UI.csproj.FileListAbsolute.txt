@@ -85,3 +85,13 @@ C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Konscious.Security.Cryptogra
 C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Numerics.Vectors.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Buffers.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Food_Fate_DAL.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Food_Fate_DAL.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\MySqlConnector.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Food_Fate_BLL.dll.config
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\MySqlConnector.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate\bin\Food_Fate_DAL.dll.config
