@@ -91,7 +91,7 @@ namespace Food_Fate_DAL
 
         //returns a SqlDataReader variable with userEmail at index 0, userName at 1, and userImage at 2
         //if needed I can change it so it can return a string[] with the values at the same index
-        public MySqlDataReader GetUserInfo(int userID)
+        public string[] DBGetUserInfo(int userID)
         {
             using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
@@ -100,13 +100,21 @@ namespace Food_Fate_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     conn.Open();
                     var dr = cmd.ExecuteReader();
-                    return dr;
+
+                    string[] strings = new string[3];
+                    if (dr.Read())
+                    {
+                        strings[0] = dr.GetString(0);
+                        strings[1] = dr.GetString(1);
+                        strings[2] = dr.GetString(2);
+                    }
+                    return strings;
                 }
             }
         }
 
         //returns a SqlDataReader of x favorites starting at an index of 0
-        public MySqlDataReader GetFavorites(int userID)
+        public List<string> DBGetFavorites(int userID)
         {
             using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
@@ -115,7 +123,14 @@ namespace Food_Fate_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     conn.Open();
                     var dr = cmd.ExecuteReader();
-                    return dr;
+
+                    List<string> favorites = new List<string>();
+                    while (dr.Read())
+                    {
+                        favorites.Add(dr.GetString(0));
+                    }
+
+                    return favorites;
                 }
             }
         }
@@ -150,9 +165,38 @@ namespace Food_Fate_DAL
             }
         }
 
+        //same as above but for updatepassword functionality.
+        public string[] RetrieveHashSalt2(int userID)
+        {
+            using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                using (var cmd = new MySqlCommand("select userPassword, userSalt from AuthTable where userID='" + userID + "'", conn))
+                {
+                    string hash;
+                    string salt;
+
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    conn.Open();
+                    var dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        hash = dr.GetString(0);
+                        salt = dr.GetString(1);
+                    }
+                    else
+                    {
+                        string[] empty = new string[2];
+                        return empty;
+                    }
+                    string[] bytes = { hash, salt };
+                    return bytes;
+                }
+            }
+        }
+
         //UpdatesUserInfo with new values. if email is updated to an email in use returns -2
         //returns 0 if unable to update, 1 if able to
-        public int UpdateUserInfo(int userID, string userEmail, string userName, string userImage)
+        public int DBUpdateUserInfo(int userID, string userEmail, string userName, string userImage)
         {
             using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
@@ -178,7 +222,7 @@ namespace Food_Fate_DAL
         }
 
         //updates Password returns 1 if able to 0 if not
-        public int UpdatePassword(int userID, string hashedPassword, string hashSalt)
+        public int DBUpdatePassword(int userID, string hashedPassword, string hashSalt)
         {
             using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
@@ -192,7 +236,7 @@ namespace Food_Fate_DAL
         }
 
         //returns 1 if able to. returns 0 if userID doesn't exist
-        public int DeleteUser(int userID)
+        public int DBDeleteUser(int userID)
         {
             using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
