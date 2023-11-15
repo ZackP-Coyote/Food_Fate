@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Food_Fate.master.cs" Inherits="CSE4050Project.Food_Fate" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%-- BootStrap CSS --%>
+    <link href="bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+
+    <%-- DataTables CSS (?) --%>
+    <link href="datatables/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%-- Font Awesome CSS --%>
+    <link href="fontawesome/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
+
+    <%-- Custom CSS --%>
+    <!--<link href="CSS/FoodFate.css" rel="stylesheet" /> -->
+    <link href="CSS/MasterPage.css" rel="stylesheet" />
+
+
+    <%-- jquery (maybe not) --%>
+    <script src="bootstrap/JS/jquery-3.3.1.slim.min.js"></script>
+
+    <%-- popper JS --%>
+    <script src="bootstrap/JS/popper.min.js"></script>
+
+    <%-- Bootstrap JS --%>
+    <script src="bootstrap/JS/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- Header (navbar) -->
+        <div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+               
+                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                       data-bs-target="#navbarSupportedContent" 
+                       aria-controls="navbarSupportedContent" aria-expanded="false" 
+                       aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                   </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Main_Page.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Register</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False">Hello user</asp:LinkButton>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+        <!-- /Header (navbar) -->
+
+        <!--Main Content Placeholder (LEAVE ALONE) -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Main Content Placeholder (LEAVE ALONE) -->
+
+
+        <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                           </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">Food Fate</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ./Footer -->
+
+
+    </form>
+</body>
+</html>
