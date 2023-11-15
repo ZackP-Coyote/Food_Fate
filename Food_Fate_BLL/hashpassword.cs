@@ -36,17 +36,17 @@ namespace Food_Fate_BLL
         public string[] CreateHash(string password)
         {
             var salt = CreateSalt();
-            var saltstring = Encoding.Unicode.GetString(salt);
+            string saltbase64 = System.Convert.ToBase64String(salt);
 
             var hash = HashPassword(password, salt);
-            var hashstring = Encoding.Unicode.GetString(hash);
+            var hashbase64 = System.Convert.ToBase64String(hash);
 
-            string[] authentication = {hashstring, saltstring };
+            string[] authentication = {hashbase64, saltbase64};
             return authentication;
         }
 
         //used during login to verify password 
-        //password and salt saved as strings so when retrieved from DB run a Encoding.Unicode.GetBytes(string) to be able to input them into the VerifyHash function
+        //password and salt saved as strings so when retrieved from DB run a System.Convert.FromBase64String to be able to input them into the VerifyHash function
         public bool VerifyHash(string password, byte[] hash, byte[] salt)
         {
             var newHash = HashPassword(password, salt);
