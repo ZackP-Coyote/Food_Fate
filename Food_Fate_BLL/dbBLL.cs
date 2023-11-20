@@ -28,6 +28,11 @@ namespace Food_Fate_BLL
             dbfunctions df = new dbfunctions();
             string[] verify = df.RetrieveHashSalt(userEmail);
 
+            if (verify[0] == null)
+            {
+                return -1;
+            }
+
             byte[] pass = System.Convert.FromBase64String(verify[0]);
             byte[] salt = System.Convert.FromBase64String(verify[1]);
 
