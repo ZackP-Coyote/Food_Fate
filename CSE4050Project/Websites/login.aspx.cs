@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Food_Fate_BLL;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -11,8 +12,6 @@ namespace CSE4050Project
 {
     public partial class login : System.Web.UI.Page
     {
-        string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-        //Change Con to whatever your SQL user is
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -27,28 +26,18 @@ namespace CSE4050Project
         {
             try
             {
-                SqlConnection con = new SqlConnection(strcon);
-                if(con.State == System.Data.ConnectionState.Closed)
+                dbBLL dbRef = new dbBLL();
+                int res = dbRef.LogIn(TextBox1.Text.Trim(), TextBox2.Text.Trim());
+
+                if (res > -1) //Checks if one or both are wrong (true and false statement)
                 {
-                    con.Open();
-                }
+                    string[] info = dbRef.GetUserInfo(res);
 
-                SqlCommand cmd = new SqlCommand("select * from EXAMPLE where EMAIL='" + TextBox1.Text.Trim() + "' AND PASSWORD='" + TextBox2.Text.Trim() + "';"
-                    , con);
+                    Response.Write("<script> alert ('Login Successful'); <script>");
+                    Session["userID"] = res; //sets userID as session variable for usage in other db functions
+                    Session["username"] = info[1]; //person's username
+                    Session["role"] = "user"; //for master page
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows) //Checks if one or both are wrong (true and false statement)
-                {
-                    while (reader.Read())
-                    {
-                        Response.Write("<script> alert ('Login Successful'); <script>");
-                        Session["username"] = reader.GetValue(0).ToString(); //person's username
-                        Session["password"] = reader.GetValue(0).ToString(); // ??? not sure yet
-                        Session["role"] = "user"; //for master page
-
-                        //Change 0 to the valid row. CHECKING FOR EMAIL ID
-                    }
                     Response.Redirect("Main_Page.aspx");
                 }
                 else
