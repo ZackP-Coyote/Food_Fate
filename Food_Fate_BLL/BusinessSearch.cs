@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
-
+using Newtonsoft.Json;
 
 class YelpApi
 {
@@ -17,14 +17,14 @@ class YelpApi
 
 
         string shopSearch = "lunch"; // TODO: Change this to the user's search
-        int radiusInMeters = 10000; // TODO: Change this to the user's search
+        string radiusInMeters = "10000"; // TODO: Change this to the user's search
         string searchArea = "San Bernadino"; // TODO: Change this to the user's search
 
         // Information to be searched
         Dictionary<string, string> parameters = new Dictionary<string, string>
         {
             { "term", shopSearch },
-            { "limit", 50 },
+            { "limit", "50" },
             { "radius", radiusInMeters },
             { "location", searchArea }
         };
@@ -42,7 +42,8 @@ class YelpApi
 
             if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsAsync<YelpApiResponse>();
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var content = JsonConvert.DeserializeObject<YelpApiResponse>(jsonString);
                 var businesses = content.businesses;
 
                 foreach (var business in businesses)
