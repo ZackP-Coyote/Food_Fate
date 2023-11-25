@@ -2403,6 +2403,10 @@
     </Compile>
     <Compile Include="Websites\Search_Results.aspx.cs">
       <DependentUpon>Search_Results.aspx</DependentUpon>
+<<<<<<< Updated upstream
+=======
+      <SubType>ASPXCodeBehind</SubType>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="Websites\Search_Results.aspx.designer.cs">
       <DependentUpon>Search_Results.aspx</DependentUpon>

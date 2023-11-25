@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSE4050Project
+namespace CSE4050Project.Websites
 {
 
 
-    public partial class Main_Page
+    public partial class Search_Results
     {
 
         /// <summary>

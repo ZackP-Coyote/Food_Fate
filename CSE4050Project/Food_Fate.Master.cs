@@ -14,7 +14,8 @@ namespace CSE4050Project
         {
             try
             {
-                if (Session["role"].Equals(""))
+                
+                if (Session["role"] == null)
                 {
                     LinkButton1.Visible = true; //Login button
                     LinkButton2.Visible = true; //Register button
@@ -37,6 +38,7 @@ namespace CSE4050Project
                     LinkButton6.Visible = true; //Admin link button
                 }
             }
+
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');<script>");
@@ -66,7 +68,6 @@ namespace CSE4050Project
         {
             //Clears everything for the logout button 
             Session["username"] = ""; //person's username
-            Session["password"] = ""; // ??? not sure yet
             Session["role"] = ""; //for master page
             LinkButton1.Visible = true; //Login button
             LinkButton2.Visible = true; //Register button
