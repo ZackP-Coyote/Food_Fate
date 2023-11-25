@@ -13,12 +13,5 @@ namespace CSE4050Project
         {
 
         }
-
-        
-        protected void SearchButton(object sender, EventArgs e)
-        {
-
-            Response.Redirect("Search_Results.aspx");
-        }
     }
 }
