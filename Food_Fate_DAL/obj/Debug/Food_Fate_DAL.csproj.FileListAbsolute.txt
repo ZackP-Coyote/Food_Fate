@@ -24,6 +24,8 @@ C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Threading.T
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\MySqlConnector.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+<<<<<<< Updated upstream
+=======
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.dll.config
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.dll
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.pdb
@@ -50,3 +52,30 @@ C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.cspro
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CopyComplete
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.dll
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.pdb
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.dll.config
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Food_Fate_DAL.pdb
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\MySqlConnector.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Buffers.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Memory.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Argon2.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\Konscious.Security.Cryptography.Blake2.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\MySqlConnector.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Buffers.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Memory.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.AssemblyReference.cache
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CoreCompileInputs.cache
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CopyComplete
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.dll
+C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.pdb
+>>>>>>> Stashed changes
