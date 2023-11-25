@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-class YelpApi
+public class YelpApi
 {
     static async Task Main(string[] args)
     {
-        // Define API Key
-        string apiKey = GetMyKey();
+        string apiKey = GetMyKey.ApiKey();
         string endpoint = "https://api.yelp.com/v3/businesses/search";
         string authorizationHeader = "Bearer " + apiKey;
 
-
         string shopSearch = "lunch"; // TODO: Change this to the user's search
         string radiusInMeters = "10000"; // TODO: Change this to the user's search
-        string searchArea = "San Bernadino"; // TODO: Change this to the user's search
+        string searchArea = "San Bernardino"; // TODO: Change this to the user's search
 
         // Information to be searched
         Dictionary<string, string> parameters = new Dictionary<string, string>
@@ -59,24 +55,18 @@ class YelpApi
                     };
                     allBusinessInfo.Add(businessSet);
                 }
+
+                // Shuffle the list of businesses
+                Shuffle(allBusinessInfo);
             }
             else
             {
                 Console.WriteLine($"Error: {response.StatusCode}");
             }
         }
-
-        // Shuffle the list of businesses
-        Shuffle(allBusinessInfo);
     }
 
-    static string GetMyKey()
-    {
-        
-        return "rU9x88OG4P4xmlrQAiuq44l6DLl0wpVy8CKzKQeXnj72Xz086wx46zMjGwPLsgLXqZ9s4SG0LWZvV-JoS_XPGWy2HMx-psS3rXEsr9xvij8RSLevnlQRd_djeAgnZXYx";
-    }
-
-    //Shuffle the list of businesses
+    // Shuffle the list of businesses
     static void Shuffle<T>(List<T> list)
     {
         Random rng = new Random();
@@ -110,5 +100,13 @@ class YelpApi
     public class Location
     {
         public string address1 { get; set; }
+    }
+}
+
+public class GetMyKey
+{
+    public static string ApiKey()
+    {
+        return "rU9x88OG4P4xmlrQAiuq44l6DLl0wpVy8CKzKQeXnj72Xz086wx46zMjGwPLsgLXqZ9s4SG0LWZvV - JoS_XPGWy2HMx - psS3rXEsr9xvij8RSLevnlQRd_djeAgnZXYx";
     }
 }
