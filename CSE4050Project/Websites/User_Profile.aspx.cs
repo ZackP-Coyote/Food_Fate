@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Food_Fate_BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,35 @@ namespace CSE4050Project.Websites
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            dbBLL bLL = new dbBLL();
+            int uID = (int)Session["userID"];
+            int res = bLL.UpdateUserInfo(uID, TextBox1.Text.Trim(), TextBox3.Text.Trim(), "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/profile-design-template-4c23db68ba79c4186fbd258aa06f48b3_screen.jpg?ts=1581063859");
+            if (res == -2)
+            {
+                Response.Write("<script>alert('Email already in use.');<script>");
+            }
+            else if (res == 1)
+            {
+                /*currently having issues with this since it seems the old password textbox is not coded correctly. 
+                 also maybe have a check in the html or maybe even here to make sure both textbox2 and textbox4 are filled*/
+                int res2 = bLL.UpdatePassword(uID, TextBox2.Text.Trim(), TextBox4.Text.Trim());
+                if (res2 == 1)
+                {
+                    Response.Write("<script>alert('Successfully updated user information.');<script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Unable to update user password.');<script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Unable to update user information.');<script>");
+            }
         }
     }
 }

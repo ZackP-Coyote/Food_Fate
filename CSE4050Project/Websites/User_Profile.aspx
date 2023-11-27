@@ -55,8 +55,7 @@
                         <div class="col-md-6">
                             <label>Old Password:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox2" 
-                                    runat="server" placeholder="Password" TextMode="Password" ReadOnly="True"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -70,7 +69,7 @@
                             <br />
 
                             <div class="d-grid gap-2 col-6 mx-auto">
-                                <asp:Button class="btn btn-primary btn-block " ID="Button1" runat="server" Text="Update" />
+                                <asp:Button class="btn btn-primary btn-block " ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" />
                             </div>
 
                             <br />
