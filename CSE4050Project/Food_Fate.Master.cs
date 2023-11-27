@@ -14,7 +14,7 @@ namespace CSE4050Project
         {
             try
             {
-                if (Session["role"].Equals(""))
+                if (Session["role"] == null)
                 {
                     LinkButton1.Visible = true; //Login button
                     LinkButton2.Visible = true; //Register button

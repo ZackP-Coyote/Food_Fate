@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -12,9 +13,22 @@ public class YelpApi
         string endpoint = "https://api.yelp.com/v3/businesses/search";
         string authorizationHeader = "Bearer " + apiKey;
 
-        string shopSearch = "lunch"; // TODO: Change this to the user's search
-        string radiusInMeters = "10000"; // TODO: Change this to the user's search
-        string searchArea = "San Bernardino"; // TODO: Change this to the user's search
+        string shopSearch = ""; // TODO: Change this to the user's search
+        string radiusInMeters = ""; // TODO: Change this to the user's search
+        string searchArea = ""; // TODO: Change this to the user's search
+
+        if (shopSearch == null)
+        {
+            shopSearch = "restaurant";
+        }
+        if (radiusInMeters == null)
+        {
+            radiusInMeters = "10000";
+        }
+        if (searchArea == null)
+        {
+            searchArea = "San Bernardino";
+        }
 
         // Information to be searched
         Dictionary<string, string> parameters = new Dictionary<string, string>
@@ -40,18 +54,18 @@ public class YelpApi
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var content = JsonConvert.DeserializeObject<YelpApiResponse>(jsonString);
-                var businesses = content.businesses;
+                var businesses = content.Businesses;
 
                 foreach (var business in businesses)
                 {
                     string[] businessSet =
                     {
-                        business.id,
-                        business.name,
-                        business.is_closed.ToString(),
-                        business.rating.ToString(),
-                        business.image_url,
-                        business.location.address1
+                        business.Id,
+                        business.Name,
+                        business.Is_closed.ToString(),
+                        business.Rating.ToString(),
+                        business.Image_url,
+                        business.Location.Address1
                     };
                     allBusinessInfo.Add(businessSet);
                 }
@@ -84,22 +98,22 @@ public class YelpApi
     // Define classes to deserialize JSON response
     public class YelpApiResponse
     {
-        public List<Business> businesses { get; set; }
+        public List<Business> Businesses { get; set; }
     }
 
     public class Business
     {
-        public string id { get; set; }
-        public string name { get; set; }
-        public bool is_closed { get; set; }
-        public double rating { get; set; }
-        public string image_url { get; set; }
-        public Location location { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public bool Is_closed { get; set; }
+        public double Rating { get; set; }
+        public string Image_url { get; set; }
+        public Location Location { get; set; }
     }
 
     public class Location
     {
-        public string address1 { get; set; }
+        public string Address1 { get; set; }
     }
 }
 

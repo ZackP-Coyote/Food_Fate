@@ -98,6 +98,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLookUp.cs" />
     <Compile Include="BusinessSearch.cs" />
     <Compile Include="dbBLL.cs" />
     <Compile Include="hashpassword.cs" />
