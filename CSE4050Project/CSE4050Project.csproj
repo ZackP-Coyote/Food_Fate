@@ -2230,6 +2230,7 @@
     <Content Include="Websites\login.aspx" />
     <Content Include="Websites\Main_Page.aspx" />
     <Content Include="Websites\Register.aspx" />
+    <Content Include="Websites\Search_Results.aspx" />
     <Content Include="Websites\Testing Purposes.aspx" />
     <Content Include="Websites\Main_Page.html" />
     <Content Include="Websites\script.js" />
@@ -2399,6 +2400,12 @@
     </Compile>
     <Compile Include="Websites\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Websites\Search_Results.aspx.cs">
+      <DependentUpon>Search_Results.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Websites\Search_Results.aspx.designer.cs">
+      <DependentUpon>Search_Results.aspx</DependentUpon>
     </Compile>
     <Compile Include="Websites\Testing Purposes.aspx.cs">
       <DependentUpon>Testing Purposes.aspx</DependentUpon>

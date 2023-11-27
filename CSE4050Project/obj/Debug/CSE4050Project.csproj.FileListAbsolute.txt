@@ -263,3 +263,7 @@ C:\Users\user\Documents\Git\FoodFate\CSE4050Project\obj\Debug\CSE4050Project.csp
 C:\Users\user\Documents\Git\FoodFate\CSE4050Project\obj\Debug\CSE4050Project.csproj.CopyComplete
 C:\Users\user\Documents\Git\FoodFate\CSE4050Project\obj\Debug\CSE4050Project.dll
 C:\Users\user\Documents\Git\FoodFate\CSE4050Project\obj\Debug\CSE4050Project.pdb
+D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.csproj.AssemblyReference.cache
+D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.csproj.CoreCompileInputs.cache
+D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.pdb
