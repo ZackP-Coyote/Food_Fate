@@ -2226,11 +2226,11 @@
     <Content Include="Scripts\jquery-3.7.0.min.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Websites\Search_Results.aspx" />
     <Content Include="Websites\Admin_Login.aspx" />
     <Content Include="Websites\login.aspx" />
     <Content Include="Websites\Main_Page.aspx" />
     <Content Include="Websites\Register.aspx" />
-    <Content Include="Websites\Search_Results.aspx" />
     <Content Include="Websites\Testing Purposes.aspx" />
     <Content Include="Websites\Main_Page.html" />
     <Content Include="Websites\script.js" />
@@ -2351,6 +2351,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Websites\Search_Results.aspx.cs">
+      <DependentUpon>Search_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Websites\Search_Results.aspx.designer.cs">
+      <DependentUpon>Search_Results.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Websites\Admin_Login.aspx.cs">
       <DependentUpon>Admin_Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2400,12 +2407,6 @@
     </Compile>
     <Compile Include="Websites\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Websites\Search_Results.aspx.cs">
-      <DependentUpon>Search_Results.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Websites\Search_Results.aspx.designer.cs">
-      <DependentUpon>Search_Results.aspx</DependentUpon>
     </Compile>
     <Compile Include="Websites\Testing Purposes.aspx.cs">
       <DependentUpon>Testing Purposes.aspx</DependentUpon>
