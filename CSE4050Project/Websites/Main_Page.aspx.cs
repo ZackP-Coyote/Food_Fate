@@ -13,5 +13,10 @@ namespace CSE4050Project
         {
 
         }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Search_Results.aspx");
+        }
     }
 }

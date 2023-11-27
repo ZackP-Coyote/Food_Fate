@@ -15,7 +15,7 @@
             <asp:ListItem Text="Italian" Value="Italian" />
             <asp:ListItem Text="Thai" Value="Thai" />
         </asp:DropDownList>
-        <asp:Button class="btn btn-primary" runat="server" Text="Search" OnClick="SearchButton"></asp:Button> <br />
+        <asp:Button class="btn btn-primary" runat="server" Text="Search" OnClick="Unnamed1_Click"></asp:Button> <br />
     </div>
     
     
