@@ -267,3 +267,5 @@ D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Projec
 D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.csproj.CoreCompileInputs.cache
 D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.dll
 D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.pdb
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\Microsoft.Extensions.Logging.Abstractions.xml

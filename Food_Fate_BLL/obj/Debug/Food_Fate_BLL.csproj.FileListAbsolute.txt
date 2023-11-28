@@ -50,6 +50,17 @@ C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\MySqlConnector.xml
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.csproj.CopyComplete
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Food_Fate_BLL.dll.config
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\MySqlConnector.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Food_Fate_DAL.dll.config
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\MySqlConnector.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+=======
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Food_Fate_BLL.dll.config
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Food_Fate_BLL.dll
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Food_Fate_BLL.pdb
@@ -81,3 +92,5 @@ D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.csproj.CopyComplete
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.dll
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml

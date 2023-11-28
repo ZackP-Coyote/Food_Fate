@@ -200,7 +200,7 @@ namespace Food_Fate_DAL
         {
             using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
             {
-                using (var cmd = new MySqlCommand("select * from UserInfo where userEmail='" + userEmail + "' and userID !=" + userID + ""))
+                using (var cmd = new MySqlCommand("select * from UserInfo where userEmail='" + userEmail + "' and userID !=" + userID + "", conn))
                 {
                     conn.Open();
                     var dr = cmd.ExecuteReader();
