@@ -76,3 +76,5 @@ D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CopyComplete
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.dll
 D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
