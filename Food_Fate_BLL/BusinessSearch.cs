@@ -7,15 +7,15 @@ using Newtonsoft.Json;
 
 public class YelpApi
 {
-    static async Task Main(string[] args)
+    public async Task Main(string[] args)
     {
         string apiKey = GetMyKey.ApiKey();
         string endpoint = "https://api.yelp.com/v3/businesses/search";
         string authorizationHeader = "Bearer " + apiKey;
 
-        string shopSearch = ""; // TODO: Change this to the user's search
-        string radiusInMeters = ""; // TODO: Change this to the user's search
-        string searchArea = ""; // TODO: Change this to the user's search
+        string shopSearch = args[2]; // TODO: Change this to the user's search
+        string radiusInMeters = args[1]; // TODO: Change this to the user's search
+        string searchArea = args[0]; // TODO: Change this to the user's search
 
         if (shopSearch == null)
         {
@@ -121,6 +121,6 @@ public class GetMyKey
 {
     public static string ApiKey()
     {
-        return "rU9x88OG4P4xmlrQAiuq44l6DLl0wpVy8CKzKQeXnj72Xz086wx46zMjGwPLsgLXqZ9s4SG0LWZvV - JoS_XPGWy2HMx - psS3rXEsr9xvij8RSLevnlQRd_djeAgnZXYx";
+        return "rU9x88OG4P4xmlrQAiuq44l6DLl0wpVy8CKzKQeXnj72Xz086wx46zMjGwPLsgLXqZ9s4SG0LWZvV-JoS_XPGWy2HMx-psS3rXEsr9xvij8RSLevnlQRd_djeAgnZXYx";
     }
 }
