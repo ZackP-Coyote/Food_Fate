@@ -25,7 +25,7 @@ namespace CSE4050Project.Websites
             int res = dbRef.SignUp(TextBox1.Text.Trim(), TextBox3.Text.Trim(), TextBox2.Text.Trim());
             if (res == -2)
             {
-                Response.Write("<script>alert('Email already in use.');<script>");
+                Response.Write("Email already in use");
             }
             else
             {
