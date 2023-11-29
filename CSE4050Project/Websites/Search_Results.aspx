@@ -5,7 +5,7 @@
     <h1>Search Again?</h1>
     <div class="input-group">
         <asp:TextBox ID="TextBox1" runat="server" Placeholder="Enter ZIP Code or Address"></asp:TextBox>
-        
+        <asp:TextBox ID="TextBox2" runat="server" Placeholder="Radius"></asp:TextBox>
         <asp:DropDownList ID="DropDownList1" runat="server">
                 <asp:ListItem Text="Filter" Value="None" />
                 <asp:ListItem Text="Burgers" Value="Burgers" />
