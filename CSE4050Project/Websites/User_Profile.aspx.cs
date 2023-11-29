@@ -22,7 +22,7 @@ namespace CSE4050Project.Websites
             int res = bLL.UpdateUserInfo(uID, TextBox1.Text.Trim(), TextBox3.Text.Trim(), "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/profile-design-template-4c23db68ba79c4186fbd258aa06f48b3_screen.jpg?ts=1581063859");
             if (res == -2)
             {
-                Response.Write("<script>alert('Email already in use.');<script>");
+                Response.Write("Email already in use.");
             }
             else if (res == 1)
             {
@@ -31,16 +31,16 @@ namespace CSE4050Project.Websites
                 int res2 = bLL.UpdatePassword(uID, TextBox2.Text.Trim(), TextBox4.Text.Trim());
                 if (res2 == 1)
                 {
-                    Response.Write("<script>alert('Successfully updated user information.');<script>");
+                    Response.Write("Successfully updated user information.");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Unable to update user password.');<script>");
+                    Response.Write("Unable to update user password.");
                 }
             }
             else
             {
-                Response.Write("<script>alert('Unable to update user information.');<script>");
+                Response.Write("Unable to update user information.");
             }
         }
     }
