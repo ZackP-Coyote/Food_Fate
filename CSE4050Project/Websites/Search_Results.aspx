@@ -28,7 +28,7 @@
                     <div class="col">
                         <center>
                             <h2>
-                                You're foods have been selected
+                                <asp:Label ID="_pageTitle" runat="server">You're foods have been selected</asp:Label>
                             </h2>
                         </center>
                     </div>
