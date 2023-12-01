@@ -33,7 +33,7 @@ namespace CSE4050Project
                 {
                     string[] info = dbRef.GetUserInfo(res);
 
-                    Response.Write("<script> alert ('Login Successful'); <script>");
+                    Response.Write("Login Successful");
                     Session["userID"] = res; //sets userID as session variable for usage in other db functions
                     Session["username"] = info[1]; //person's username
                     Session["role"] = "user"; //for master page
@@ -42,14 +42,14 @@ namespace CSE4050Project
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invalid Email or Password');<script>");
+                    Response.Write("Invalid Email or Password");
                 }
 
             }
 
             catch (Exception ex)
             {
-                Response.Write("<script>alert('" + ex.Message + "');<script>");
+                Response.Write("" + ex.Message + "");
                 //Catches errors in a display box instead of crashing
             }
         }
