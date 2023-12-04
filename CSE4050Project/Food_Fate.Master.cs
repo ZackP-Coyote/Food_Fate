@@ -39,7 +39,7 @@ namespace CSE4050Project
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('" + ex.Message + "');<script>");
+                Response.Write("" + ex.Message + "");
                 //Catches errors in a display box instead of crashing
             }
 
@@ -76,6 +76,11 @@ namespace CSE4050Project
 
             LinkButton6.Visible = true; //Admin link button
             Response.Redirect("Main_Page.aspx");
+        }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("User_Profile.aspx");
         }
     }
 }
