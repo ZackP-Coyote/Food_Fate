@@ -4,16 +4,13 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 
 public class YelpApi
 {
     public async Task Main(string[] args)
     {
-
-        string apiKey = GetMyKey.ApiKey();
-        string endpoint = "https://api.yelp.com/v3/businesses/search";
-        string authorizationHeader = "Bearer " + apiKey;
 
         string shopSearch = args[2];
         //string radiusInMeters = args[1];
@@ -51,6 +48,19 @@ public class YelpApi
             { "location", searchArea }
         };
 
+        var payload = new JObject();
+        payload.Add("term", shopSearch);
+        payload.Add("limit", "50");
+        //payload.Add("radius", radiusInMeters);
+        payload.Add("location", searchArea);
+
+        string apiKey = GetMyKey.ApiKey();
+        string endpoint = "https://api.yelp.com/v3/businesses/search" + "?" + "term=" + shopSearch + "&location=" + searchArea;
+        string authorizationHeader = "Bearer " + apiKey;
+
+
+
+
         List<string[]> allBusinessInfo = new List<string[]>();
         int numBusinesses = int.Parse(parameters["limit"]);
 
@@ -61,8 +71,13 @@ public class YelpApi
 
             var queryString = new FormUrlEncodedContent(parameters);
             var request = new RestRequest();
-            request.AddJsonBody(parameters.ToString(), DataFormat.Json);
+
+            //request.AddJsonBody(parameters.ToString(), DataFormat.Json);
             //request.AddParameter(parameters);
+            //request.AddStringBody(payload.ToString(), "application/json");
+            //request.AddStringBody(payload.ToString(), DataFormat.Json);
+
+
             var response = await client.GetAsync(endpoint).Result.Content.ReadAsStringAsync();
 
 
