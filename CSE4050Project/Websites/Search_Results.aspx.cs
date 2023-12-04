@@ -17,7 +17,10 @@ namespace CSE4050Project.Websites
 
         protected void SearchAgainButton(object sender, EventArgs e)
         {
-
+            YelpApi yelpApi= new YelpApi();
+            string[] searcharr = { TextBox1.Text.Trim(), TextBox2.Text.Trim(), DropDownList1.SelectedValue.Trim() } ;
+            yelpApi.Main(searcharr);
+            Response.Redirect("Search_Results.aspx");
         }
     }
 }
