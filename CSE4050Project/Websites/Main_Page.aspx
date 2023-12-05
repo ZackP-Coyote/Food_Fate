@@ -26,7 +26,7 @@
                         <div class="col-5">
                             <label>Enter Zip or Address</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" required="True"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" required="True"></asp:TextBox>
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@
                             
                             <label>Enter Max Radius</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" required="True"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" required="True"></asp:TextBox>
                             </div>
                         </div>
 
