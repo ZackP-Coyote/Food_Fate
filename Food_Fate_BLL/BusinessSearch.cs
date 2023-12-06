@@ -45,7 +45,7 @@ public class YelpApi
         var parameters = new Dictionary<string, string>
         {
             { "term", shopSearch },
-            { "limit", radiusInMeters },
+            { "radius", radiusInMeters },
             { "location", searchArea }
         };
 
@@ -54,7 +54,7 @@ public class YelpApi
         
 
         string apiKey = GetMyKey.ApiKey();
-        string endpoint = "https://api.yelp.com/v3/businesses/search" + "?" + "term=" + shopSearch + "&location=" + searchArea + "&limit=" + radInMeters;
+        string endpoint = "https://api.yelp.com/v3/businesses/search" + "?" + "term=" + shopSearch + "&location=" + searchArea + "&radius=" + radInMeters;
         string authorizationHeader = "Bearer " + apiKey;
 
         List<string[]> allBusinessInfo = new List<string[]>();
@@ -90,6 +90,7 @@ public class YelpApi
                         business.Is_closed.ToString(),
                         business.Rating.ToString(),
                         business.Image_url,
+                        business.Url,
                         business.Location.Address1
                     };
                 allBusinessInfo.Add(businessSet);
@@ -130,6 +131,7 @@ public class YelpApi
         public bool Is_closed { get; set; }
         public double Rating { get; set; }
         public string Image_url { get; set; }
+        public string Url { get; set; }
         public Location Location { get; set; }
     }
 
