@@ -106,3 +106,15 @@ C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\RestSharp.xml
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\System.Text.Json.xml
 C:\Users\user\Documents\Git\FoodFate\Food_Fate_BLL\bin\Debug\System.ValueTuple.xml
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\RestSharp.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Encodings.Web.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Json.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\System.ValueTuple.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\RestSharp.xml
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Encodings.Web.xml
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Json.xml
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\System.ValueTuple.xml
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml

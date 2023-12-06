@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using System.Web.Management;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
@@ -13,56 +14,51 @@ public class YelpApi
     {
 
         string shopSearch = args[2];
-        //string radiusInMeters = args[1];
+        string radiusInMeters = args[1];
         string searchArea = args[0];
+
+
+        int radInMeters = int.Parse(radiusInMeters);
+        radInMeters = radInMeters * 1609;
+        if (radInMeters > 40000)
+        {
+            radInMeters = 40000;
+        }
+        else if (radInMeters < 1000)
+        {
+            radInMeters = 1000;
+        }
+
 
         if (shopSearch == null)
         {
             shopSearch = "restaurant";
         }
-        /*
-         if (radiusInMeters == null)
-         {
-             radiusInMeters = "10000";
-         }
-        */
+        
+        
         if (searchArea == null)
         {
             searchArea = "San Bernardino, CA";
         }
 
-        var sending = new Sending
-        {
-            Address = searchArea,
-            //Radius = 10000,
-            typeOfRest = shopSearch
-        };
-
         // Information to be searched
-
         var parameters = new Dictionary<string, string>
         {
             { "term", shopSearch },
-            { "limit", "50" },
-            //{ "radius", radiusInMeters },
+            { "limit", radiusInMeters },
             { "location", searchArea }
         };
 
-        var payload = new JObject();
-        payload.Add("term", shopSearch);
-        payload.Add("limit", "50");
-        //payload.Add("radius", radiusInMeters);
-        payload.Add("location", searchArea);
+        shopSearch = shopSearch.Replace(" ", "_");
+        searchArea = searchArea.Replace(" ", "_");
+        
 
         string apiKey = GetMyKey.ApiKey();
-        string endpoint = "https://api.yelp.com/v3/businesses/search" + "?" + "term=" + shopSearch + "&location=" + searchArea;
+        string endpoint = "https://api.yelp.com/v3/businesses/search" + "?" + "term=" + shopSearch + "&location=" + searchArea + "&limit=" + radInMeters;
         string authorizationHeader = "Bearer " + apiKey;
 
-
-
-
         List<string[]> allBusinessInfo = new List<string[]>();
-        int numBusinesses = int.Parse(parameters["limit"]);
+        //int numBusinesses = 50;
 
         // Make request to Yelp API
         using (HttpClient client = new HttpClient())
@@ -141,12 +137,6 @@ public class YelpApi
     {
         public string Address1 { get; set; }
     }
-}
-public class Sending
-{
-    public string Address { get; set; }
-    public int Radius { get; set; }
-    public string typeOfRest { get; set; }
 }
 
 public class GetMyKey
