@@ -471,3 +471,15 @@ D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\bin\System.Text.Encodin
 D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\bin\Microsoft.Extensions.Logging.Abstractions.xml
 D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\bin\System.Diagnostics.DiagnosticSource.xml
 D:\Users\Owner\Documents\GitHub\Food_Fate\CSE4050Project\obj\Debug\CSE4050Project.csproj.CopyComplete
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\RestSharp.dll
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\System.Text.Json.dll
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\System.ValueTuple.dll
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\System.Text.Encodings.Web.dll
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\RestSharp.xml
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\System.Text.Json.xml
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\System.ValueTuple.xml
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\System.Text.Encodings.Web.xml
+C:\Users\user\Documents\Git\FoodFate\CSE4050Project\bin\Microsoft.Extensions.Logging.Abstractions.xml
