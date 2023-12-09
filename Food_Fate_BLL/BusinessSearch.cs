@@ -10,7 +10,7 @@ using RestSharp;
 
 public class YelpApi
 {
-    public async Task Main(string[] args)
+    public async Task<List<string[]>> BSAsync(string[] args)
     {
 
         string shopSearch = args[2];
@@ -98,7 +98,7 @@ public class YelpApi
 
             // Shuffle the list of businesses
             Shuffle(allBusinessInfo);
-
+            return allBusinessInfo;
 
         }
     }
