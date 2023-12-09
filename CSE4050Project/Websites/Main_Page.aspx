@@ -24,31 +24,34 @@
 
                     <div class="row">
                         <div class="col-5">
-                            <label>Enter Zip or Address</label>
+                            <label>Enter Zip or City</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" required="True"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="ZipCity" runat="server" required="True"></asp:TextBox>
                             </div>
                         </div>
 
                         <div class="col-5">
                             
-                            <label>Enter Max Radius</label>
+                            <label>Enter Max Radius in Miles</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" required="True"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="Radius" runat="server" required="True"></asp:TextBox>
                             </div>
                         </div>
 
                         <div class="col-2">
                             <label>Filters</label>
                             <div class="form-group">
-                                <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
+                                <asp:DropDownList CssClass="form-control" ID="Filters" runat="server">
                                     <asp:ListItem Text="None" Value="None" />
                                     <asp:ListItem Text="Burgers" Value="Burgers" />
                                     <asp:ListItem Text="Japanese" Value="Japanese" />
                                     <asp:ListItem Text="Chinese" Value="Chinese" />
+                                    <asp:ListItem Text="Vietnamese" Value="Vietnamese" />
+                                    <asp:ListItem Text="Thai" Value="Thai" />
                                     <asp:ListItem Text="Mexican" Value="Mexican" />
                                     <asp:ListItem Text="Italian" Value="Italian" />
-                                    <asp:ListItem Text="Thai" Value="Thai" />
+                                    <asp:ListItem Text="Hot Dogs" Value="HotDogs" />
+                                    <asp:ListItem Text="Donuts" Value="Donuts" />
                                 </asp:DropDownList>
                             </div>
                         </div>
@@ -57,7 +60,7 @@
 
                         <div class="d-grid gap-2">
                             <br />
-                            <asp:Button class="btn btn-primary" runat="server" Text="Search" OnClick="Unnamed1_Click"></asp:Button> <br />
+                            <asp:Button class="btn btn-primary" runat="server" Text="Search" OnClick="Redirect_Click"></asp:Button> <br />
 
                         </div>
 
