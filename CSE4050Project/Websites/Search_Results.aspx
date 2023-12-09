@@ -85,9 +85,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 border">
-                        <center>
                             <h4>Resturants appear here</h4>
-                            <div class="col">
+                            <div class="col-4">
                                 <asp:PlaceHolder ID="Restaurant_Image_1" runat="server"></asp:PlaceHolder>
                             </div>
                             <div class="col">
@@ -97,7 +96,7 @@
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_1" runat="server"></asp:PlaceHolder>
                             </div>
-                        </center>
+                       
                     </div>
 
                     <div class="col-md-4 border">

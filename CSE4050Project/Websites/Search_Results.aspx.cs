@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Food_Fate_BLL;
+using static System.Net.WebRequestMethods;
 
 namespace CSE4050Project.Websites
 {
@@ -22,19 +23,20 @@ namespace CSE4050Project.Websites
             //string ZC = Request.QueryString["ZipCity"];
             string R = Request.QueryString["Radius"];
 
+            string imageurl1 = "https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962_3x2.jpg?w=1638&h=1092";
+            
+            Restaurant_Image_1.Controls.Add(new Literal() { Text = "<div> <img width=300px src=" + imageurl1 + "alt=Resturant 1 Image></div>" });
 
 
-            Image Testing = new Image();
-            Testing.ImageUrl = "Testing";
-            Restaurant_Image_1.Controls.Add(Testing);
 
-            Button Restaurant_Button_1 = new Button();
-            Restaurant_Button_1.Text = "testing";
-            Restaurant_Name_1.Controls.Add(Restaurant_Button_1);
+            string nameurl = "https://www.w3schools.com/html/html_images.asp";
+            string resname = "W3Schools";
+            Restaurant_Name_1.Controls.Add(new Literal() { Text = "<div> <a href=" + nameurl + ">" + resname + "</a></div>" });
 
-            Label Restaurant_Desc_1 = new Label();
-            Restaurant_Desc_1.Text = "Testing";
-            Restaurant_Description_1.Controls.Add(Restaurant_Desc_1);
+            string Place = "Place";
+            Restaurant_Description_1.Controls.Add(new Literal() { Text = "<div>" + Place + "</div>" });
+
+            
         }
 
         protected void SearchAgainButton(object sender, EventArgs e)
