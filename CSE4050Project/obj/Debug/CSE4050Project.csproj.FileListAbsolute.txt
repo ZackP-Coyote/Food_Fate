@@ -493,3 +493,13 @@ C:\Users\kenne\Desktop\Food_Fate\CSE4050Project\bin\Microsoft.Bcl.AsyncInterface
 C:\Users\kenne\Desktop\Food_Fate\CSE4050Project\bin\System.Text.Json.xml
 C:\Users\kenne\Desktop\Food_Fate\CSE4050Project\bin\System.ValueTuple.xml
 C:\Users\kenne\Desktop\Food_Fate\CSE4050Project\bin\System.Text.Encodings.Web.xml
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\RestSharp.dll
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\System.Text.Json.dll
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\System.ValueTuple.dll
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\System.Text.Encodings.Web.dll
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\RestSharp.xml
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\System.Text.Json.xml
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\System.ValueTuple.xml
+C:\Users\brand\source\repos\Food_Fate\CSE4050Project\bin\System.Text.Encodings.Web.xml

@@ -161,3 +161,13 @@ C:\Users\kenne\Desktop\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.csproj.Co
 C:\Users\kenne\Desktop\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.csproj.CopyComplete
 C:\Users\kenne\Desktop\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.dll
 C:\Users\kenne\Desktop\Food_Fate\Food_Fate_BLL\obj\Debug\Food_Fate_BLL.pdb
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\RestSharp.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Json.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.ValueTuple.dll
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\RestSharp.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.Text.Json.xml
+C:\Users\brand\source\repos\Food_Fate\Food_Fate_BLL\bin\Debug\System.ValueTuple.xml
