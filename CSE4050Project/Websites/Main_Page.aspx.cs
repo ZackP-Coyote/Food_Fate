@@ -14,12 +14,14 @@ namespace CSE4050Project
 
         }
 
-        protected void Unnamed1_Click(object sender, EventArgs e)
+        protected void Redirect_Click(object sender, EventArgs e)
         {
-            YelpApi yelpApi = new YelpApi();
-            string[] searcharr = { TextBox1.Text.Trim(), TextBox2.Text.Trim(), DropDownList1.SelectedValue.Trim() };
-            yelpApi.Main(searcharr);
-            Response.Redirect("Search_Results.aspx");
+            //YelpApi yelpApi = new YelpApi();
+            //string[] searcharr = { TextBox1.Text.Trim(), TextBox2.Text.Trim(), DropDownList1.SelectedValue.Trim() };
+            //yelpApi.Main(searcharr);
+            //Response.Redirect("Search_Results.aspx");
+
+            Response.Redirect("Search_Results.aspx?city=" + ZipCity.Text.Trim() + " & radius= " + Radius.Text.Trim() + " & value=" + Filters.SelectedValue.Trim());
 
         }
     }

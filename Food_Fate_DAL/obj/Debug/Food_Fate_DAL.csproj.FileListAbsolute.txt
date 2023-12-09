@@ -106,3 +106,5 @@ C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.Co
 C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.csproj.CopyComplete
 C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.dll
 C:\Users\kenne\Desktop\Food_Fate\Food_Fate_DAL\obj\Debug\Food_Fate_DAL.pdb
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Users\Owner\Documents\GitHub\Food_Fate\Food_Fate_DAL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml

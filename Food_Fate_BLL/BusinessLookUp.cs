@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -9,17 +10,18 @@ class Lookup
         // Insert your Yelp Fusion API key here
         string apiKey = GetMyKey.ApiKey();
 
-        string baseUrl = "https://api.yelp.com/v3/";
         string businessId = "CHANGE ME!!";
+        string baseUrl = "https://api.yelp.com/v3/" + businessId;
+        
 
         using (HttpClient client = new HttpClient())
         {
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + apiKey);
 
             // Construct the request URL with the business ID
-            string requestUrl = $"{baseUrl}/businesses/{businessId}";
+            var request = new RestRequest(baseUrl);
 
-            HttpResponseMessage response = await client.GetAsync(requestUrl);
+            HttpResponseMessage response = await client.GetAsync(baseUrl);
 
             if (response.IsSuccessStatusCode)
             {
@@ -30,6 +32,7 @@ class Lookup
             {
                 Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
             }
+            
         }
     }
 }

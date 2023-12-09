@@ -3,44 +3,62 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using System.Web.Management;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 
 public class YelpApi
 {
     public async Task Main(string[] args)
     {
-        string apiKey = GetMyKey.ApiKey();
-        string endpoint = "https://api.yelp.com/v3/businesses/search";
-        string authorizationHeader = "Bearer " + apiKey;
 
-        string shopSearch = args[2]; // TODO: Change this to the user's search
-        string radiusInMeters = args[1]; // TODO: Change this to the user's search
-        string searchArea = args[0]; // TODO: Change this to the user's search
+        string shopSearch = args[2];
+        string radiusInMeters = args[1];
+        string searchArea = args[0];
+
+
+        int radInMeters = int.Parse(radiusInMeters);
+        radInMeters = radInMeters * 1609;
+        if (radInMeters > 40000)
+        {
+            radInMeters = 40000;
+        }
+        else if (radInMeters < 1000)
+        {
+            radInMeters = 1000;
+        }
+
 
         if (shopSearch == null)
         {
             shopSearch = "restaurant";
         }
-        if (radiusInMeters == null)
-        {
-            radiusInMeters = "10000";
-        }
+        
+        
         if (searchArea == null)
         {
-            searchArea = "San Bernardino";
+            searchArea = "San Bernardino, CA";
         }
 
         // Information to be searched
-        Dictionary<string, string> parameters = new Dictionary<string, string>
+        var parameters = new Dictionary<string, string>
         {
             { "term", shopSearch },
-            { "limit", "50" },
             { "radius", radiusInMeters },
             { "location", searchArea }
         };
 
+        shopSearch = shopSearch.Replace(" ", "_");
+        searchArea = searchArea.Replace(" ", "_");
+        
+
+        string apiKey = GetMyKey.ApiKey();
+        string endpoint = "https://api.yelp.com/v3/businesses/search" + "?" + "term=" + shopSearch + "&location=" + searchArea + "&radius=" + radInMeters;
+        string authorizationHeader = "Bearer " + apiKey;
+
         List<string[]> allBusinessInfo = new List<string[]>();
-        int numBusinesses = int.Parse(parameters["limit"]);
+        //int numBusinesses = 50;
 
         // Make request to Yelp API
         using (HttpClient client = new HttpClient())
@@ -48,35 +66,40 @@ public class YelpApi
             client.DefaultRequestHeaders.Add("Authorization", authorizationHeader);
 
             var queryString = new FormUrlEncodedContent(parameters);
-            var response = await client.GetAsync(endpoint + "?" + await queryString.ReadAsStringAsync());
+            var request = new RestRequest();
 
-            if (response.IsSuccessStatusCode)
+            //request.AddJsonBody(parameters.ToString(), DataFormat.Json);
+            //request.AddParameter(parameters);
+            //request.AddStringBody(payload.ToString(), "application/json");
+            //request.AddStringBody(payload.ToString(), DataFormat.Json);
+
+
+            var response = await client.GetAsync(endpoint).Result.Content.ReadAsStringAsync();
+
+
+            var jsonString = response;
+            var content = JsonConvert.DeserializeObject<YelpApiResponse>(jsonString);
+            var businesses = content.Businesses;
+
+            foreach (var business in businesses)
             {
-                var jsonString = await response.Content.ReadAsStringAsync();
-                var content = JsonConvert.DeserializeObject<YelpApiResponse>(jsonString);
-                var businesses = content.Businesses;
-
-                foreach (var business in businesses)
+                string[] businessSet =
                 {
-                    string[] businessSet =
-                    {
                         business.Id,
                         business.Name,
                         business.Is_closed.ToString(),
                         business.Rating.ToString(),
                         business.Image_url,
+                        business.Url,
                         business.Location.Address1
                     };
-                    allBusinessInfo.Add(businessSet);
-                }
+                allBusinessInfo.Add(businessSet);
+            }
 
-                // Shuffle the list of businesses
-                Shuffle(allBusinessInfo);
-            }
-            else
-            {
-                Console.WriteLine($"Error: {response.StatusCode}");
-            }
+            // Shuffle the list of businesses
+            Shuffle(allBusinessInfo);
+
+
         }
     }
 
@@ -108,6 +131,7 @@ public class YelpApi
         public bool Is_closed { get; set; }
         public double Rating { get; set; }
         public string Image_url { get; set; }
+        public string Url { get; set; }
         public Location Location { get; set; }
     }
 

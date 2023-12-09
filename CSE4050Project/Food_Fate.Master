@@ -15,7 +15,7 @@
     <link href="fontawesome/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
 
     <%-- Custom CSS --%>
-    <!--<link href="CSS/FoodFate.css" rel="stylesheet" /> -->
+    <!-- <link href="CSS/FoodFate.css" rel="stylesheet" /> -->
     <link href="CSS/MasterPage.css" rel="stylesheet" />
 
 
@@ -70,7 +70,7 @@
                         </li>
 
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False">Hello user</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Hello user</asp:LinkButton>
 
                         </li>
                     </ul>
