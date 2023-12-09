@@ -12,8 +12,11 @@ namespace CSE4050Project.Websites
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string ZipCity = Request.QueryString["city"];
+            string Radius = Request.QueryString["radius"];
+            string Filters = Request.QueryString["value"];
             YelpApi yelpApi= new YelpApi();
-            string[] searcharr = { ZipCity.Text.Trim(), Radius.Text.Trim(), Filters.SelectedValue.Trim() } ;
+            string[] searcharr = { ZipCity, Radius, Filters} ;
             yelpApi.Main(searcharr);
 
             //string ZC = Request.QueryString["ZipCity"];
