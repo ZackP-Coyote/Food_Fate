@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ public class YelpApi
         }
 
 
-        if (shopSearch == null)
+        if (shopSearch == "None")
         {
             shopSearch = "restaurant";
         }
