@@ -78,56 +78,71 @@
                     <div class="col">
                         <center>
                             <h2>
-                                You're foods have been selected
+                                Your foods have been selected
                             </h2>
                         </center>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col">
+                        <hr /> <!-- adds a break line in between -->
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-4 border">
                         <center>
-                            <h4>Resturants appear here</h4>
-                            <div class="col">
+                            <div class="col rounded mx-auto d-block">
                                 <asp:PlaceHolder ID="Restaurant_Image_1" runat="server"></asp:PlaceHolder>
                             </div>
-                            <div class="col">
-                                <asp:PlaceHolder ID="Restaurant_Name_1" runat="server"><a href ="url"></a></asp:PlaceHolder>
+                            <div class="col btn btn-outline-secondary">
+                                <asp:PlaceHolder ID="Restaurant_Name_1" runat="server"><a href ="url" target="_blank"></a></asp:PlaceHolder>
                             </div>
 
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_1" runat="server"></asp:PlaceHolder>
                             </div>
-                        </center>
+
+                            <div class="col">
+                                <asp:Button ID="FavoriteButton1" runat="server" Text="Button" OnClick="FavoriteButton1_Click" />
+                            </div>
+                       </center>
                     </div>
 
                     <div class="col-md-4 border">
                         <center>
-                            <h4>Resturants appear here</h4>
-                            <div class="col">
+                            <div class="col rounded mx-auto d-block">
                                 <asp:PlaceHolder ID="Restaurant_Image_2" runat="server"></asp:PlaceHolder>
                             </div>
-                            <div class="col">
+                            <div class="col btn btn-outline-secondary">
                                 <asp:PlaceHolder ID="Restaurant_Name_2" runat="server"><a href ="url"></a></asp:PlaceHolder>
                             </div>
 
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_2" runat="server"></asp:PlaceHolder>
                             </div>
+
+                            <div class="col">
+                                <asp:Button ID="FavoriteButton2" runat="server" Text="Button" OnClick="FavoriteButton2_Click" />
+                            </div>
+
                         </center>
                     </div>
 
                     <div class="col-md-4 border">
                         <center>
-                            <h4>Resturants appear here</h4>
-                            <div class="col">
+                            <div class="col rounded mx-auto d-block">
                                 <asp:PlaceHolder ID="Restaurant_Image_3" runat="server"></asp:PlaceHolder>
                             </div>
-                            <div class="col">
+                            <div class="col btn btn-outline-secondary">
                                 <asp:PlaceHolder ID="Restaurant_Name_3" runat="server"><a href ="url"></a></asp:PlaceHolder>
                             </div>
 
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_3" runat="server"></asp:PlaceHolder>
+                            </div>
+
+                            <div class="col">
+                                <asp:Button ID="FavoriteButton3" runat="server" Text="Button" OnClick="FavoriteButton3_Click" />
                             </div>
                         </center>
                     </div>

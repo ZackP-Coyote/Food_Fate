@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ using RestSharp;
 
 public class YelpApi
 {
-    public async Task Main(string[] args)
+    public async Task<List<string[]>> BSAsync(string[] args)
     {
 
         string shopSearch = args[2];
@@ -30,7 +31,7 @@ public class YelpApi
         }
 
 
-        if (shopSearch == null)
+        if (shopSearch == "None")
         {
             shopSearch = "restaurant";
         }
@@ -98,7 +99,7 @@ public class YelpApi
 
             // Shuffle the list of businesses
             Shuffle(allBusinessInfo);
-
+            return allBusinessInfo;
 
         }
     }

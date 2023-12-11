@@ -36,7 +36,7 @@
                         <div class="col">
                             <label>Full Name:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Full Name"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Full Name" required="True"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -46,12 +46,12 @@
                         <div class="col">
                             <label>Enter Email:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email" TextMode="Email" required="True"></asp:TextBox>
                             </div>
 
                             <label>Enter Password:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password" required="True"></asp:TextBox>
                             </div>
 
                             <br />

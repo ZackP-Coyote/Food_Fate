@@ -21,7 +21,7 @@ namespace CSE4050Project
             //yelpApi.Main(searcharr);
             //Response.Redirect("Search_Results.aspx");
 
-            Response.Redirect("Search_Results.aspx?city=" + ZipCity.Text.Trim() + " & radius= " + Radius.Text.Trim() + " & value=" + Filters.SelectedValue.Trim());
+            Response.Redirect("Search_Results.aspx?city=" + ZipCity.Text.Trim() + "&radius=" + Radius.Text.Trim() + "&value=" + Filters.SelectedValue.Trim());
 
         }
     }
