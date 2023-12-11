@@ -1,5 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Food_Fate.Master" AutoEventWireup="true" CodeBehind="User_Profile.aspx.cs" Inherits="CSE4050Project.Websites.User_Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+      
+          //$(document).ready(function () {
+              //$('.table').DataTable();
+         // });
+      
+          $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+          //$('.table1').DataTable();
+      });
+    </script>
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -38,7 +53,7 @@
                         <div class="col">
                             <label>Full Name:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Full Name"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Full Name" required="True"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -47,7 +62,7 @@
                         <div class="col">
                             <label>Email:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email" TextMode="Email" required="True"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -55,13 +70,13 @@
                         <div class="col-md-6">
                             <label>Old Password:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password" required="True"></asp:TextBox>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <label>Change Password:</label>
                             <div class="form-group">
-                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Password" TextMode="Password" required="True"></asp:TextBox>
                             </div>
                         </div>
                             

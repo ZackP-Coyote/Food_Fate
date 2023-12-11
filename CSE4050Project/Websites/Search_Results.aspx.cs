@@ -49,15 +49,15 @@ namespace CSE4050Project.Websites
             //Restaurant Results
             Restaurant_Image_1.Controls.Add(new Literal() { Text = "<div> <img width=300px src=" + imageurl1 + " alt=Resturant 1 Image></div>" });
             Restaurant_Name_1.Controls.Add(new Literal() { Text = "<div> <a href=" + url1 + ">" + name1 + "</a></div>" });
-            Restaurant_Description_1.Controls.Add(new Literal() { Text = "<div>" + rating1 + "</div>" });
+            Restaurant_Description_1.Controls.Add(new Literal() { Text = "<div> Rating:" + rating1 + "</div>" });
 
             Restaurant_Image_2.Controls.Add(new Literal() { Text = "<div> <img width=300px src=" + imageurl2 + " alt=Resturant 2 Image></div>" });
             Restaurant_Name_2.Controls.Add(new Literal() { Text = "<div> <a href=" + url2 + ">" + name2 + "</a></div>" });
-            Restaurant_Description_2.Controls.Add(new Literal() { Text = "<div>" + rating2 + "</div>" });
+            Restaurant_Description_2.Controls.Add(new Literal() { Text = "<div> Rating:" + rating2 + "</div>" });
 
             Restaurant_Image_3.Controls.Add(new Literal() { Text = "<div> <img width=300px src=" + imageurl3 + " alt=Resturant 3 Image></div>" });
             Restaurant_Name_3.Controls.Add(new Literal() { Text = "<div> <a href=" + url3 + ">" + name3 + "</a></div>" });
-            Restaurant_Description_3.Controls.Add(new Literal() { Text = "<div>" + rating3 + "</div>" });
+            Restaurant_Description_3.Controls.Add(new Literal() { Text = "<div> Rating:" + rating3 + "</div>" });
 
 
             
