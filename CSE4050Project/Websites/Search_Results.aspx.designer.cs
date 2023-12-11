@@ -69,6 +69,15 @@ namespace CSE4050Project.Websites
         protected global::System.Web.UI.WebControls.PlaceHolder Restaurant_Description_1;
 
         /// <summary>
+        /// FavoriteButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button FavoriteButton1;
+
+        /// <summary>
         /// Restaurant_Image_2 control.
         /// </summary>
         /// <remarks>
@@ -96,6 +105,15 @@ namespace CSE4050Project.Websites
         protected global::System.Web.UI.WebControls.PlaceHolder Restaurant_Description_2;
 
         /// <summary>
+        /// FavoriteButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button FavoriteButton2;
+
+        /// <summary>
         /// Restaurant_Image_3 control.
         /// </summary>
         /// <remarks>
@@ -121,5 +139,14 @@ namespace CSE4050Project.Websites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder Restaurant_Description_3;
+
+        /// <summary>
+        /// FavoriteButton3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button FavoriteButton3;
     }
 }

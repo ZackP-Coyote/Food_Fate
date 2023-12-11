@@ -101,6 +101,10 @@
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_1" runat="server"></asp:PlaceHolder>
                             </div>
+
+                            <div class="col">
+                                <asp:Button ID="FavoriteButton1" runat="server" Text="Button" OnClick="FavoriteButton1_Click" />
+                            </div>
                        </center>
                     </div>
 
@@ -116,6 +120,11 @@
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_2" runat="server"></asp:PlaceHolder>
                             </div>
+
+                            <div class="col">
+                                <asp:Button ID="FavoriteButton2" runat="server" Text="Button" OnClick="FavoriteButton2_Click" />
+                            </div>
+
                         </center>
                     </div>
 
@@ -130,6 +139,10 @@
 
                             <div class="col">
                                 <asp:PlaceHolder ID="Restaurant_Description_3" runat="server"></asp:PlaceHolder>
+                            </div>
+
+                            <div class="col">
+                                <asp:Button ID="FavoriteButton3" runat="server" Text="Button" OnClick="FavoriteButton3_Click" />
                             </div>
                         </center>
                     </div>

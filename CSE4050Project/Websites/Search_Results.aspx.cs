@@ -72,6 +72,19 @@ namespace CSE4050Project.Websites
 
         }
 
-       
+        protected void FavoriteButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void FavoriteButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void FavoriteButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
