@@ -24,6 +24,15 @@ namespace CSE4050Project.Websites
         protected global::System.Web.UI.WebControls.TextBox ZipCity;
 
         /// <summary>
+        /// ZipCityRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ZipCityRFV;
+
+        /// <summary>
         /// Radius control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace CSE4050Project.Websites
         protected global::System.Web.UI.WebControls.TextBox Radius;
 
         /// <summary>
+        /// RadiusRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RadiusRFV;
+
+        /// <summary>
         /// Filters control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace CSE4050Project.Websites
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Filters;
+
+        /// <summary>
+        /// Searchbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Searchbtn;
 
         /// <summary>
         /// Restaurant_Image_1 control.

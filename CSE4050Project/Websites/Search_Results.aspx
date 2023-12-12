@@ -25,7 +25,9 @@
                          <div class="col-5">
                              <label>Enter Zip or City</label>
                              <div class="form-group">
-                                 <asp:TextBox CssClass="form-control" ID="ZipCity" runat="server" required="True"></asp:TextBox>
+                                 <asp:TextBox CssClass="form-control" ID="ZipCity" runat="server"></asp:TextBox>
+                                 <!-- <asp:RequiredFieldValidator ID="ZipCityRFV"  runat="server"  ControlToValidate="ZipCity" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator> -->
+
                              </div>
                          </div>
 
@@ -33,7 +35,8 @@
                          
                              <label>Enter Max Radius in Miles</label>
                              <div class="form-group">
-                                 <asp:TextBox CssClass="form-control" ID="Radius" runat="server" required="True"></asp:TextBox>
+                                 <asp:TextBox CssClass="form-control" ID="Radius" runat="server"></asp:TextBox>
+                                 <!-- <asp:RequiredFieldValidator ID="RadiusRFV" runat="server" ControlToValidate="Radius" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator> -->
                              </div>
                          </div>
 
@@ -59,7 +62,7 @@
 
                          <div class="d-grid gap-2">
                              <br />
-                             <asp:Button class="btn btn-primary" runat="server" Text="Search" OnClick="SearchAgainButton"></asp:Button> <br />
+                             <asp:Button ID="Searchbtn" class="btn btn-primary" runat="server" Text="Search" OnClick="SearchAgainButton"></asp:Button> <br />
 
                          </div>
 
