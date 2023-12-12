@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -12,6 +13,30 @@ namespace CSE4050Project.Websites
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int userID = (int)Session["userID"];
+            dbBLL dbRef = new dbBLL();
+            List<string> favoriteRests = dbRef.getFavorite(userID);
+            List<string[]> allRestaraunts = new List<string[]>(); 
+            for (int i = 0; i < favoriteRests.Count; i++)
+            {
+                LookUp LU = new LookUp();
+                string[] restinfo = LU.BL(favoriteRests[i]).Result;
+                string[] neededInfo = { restinfo[1], restinfo[2], restinfo[3]/*, restinfo[4]*/ };
+                allRestaraunts.Add(neededInfo);
+            }
+            try
+            {
+                //List<BOService> service = dALService.Service.ToList();
+                if (allRestaraunts.Count > 0 && allRestaraunts != null)
+                {
+                    GridView1.DataSource = allRestaraunts;
+                    GridView1.DataBind();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
         }
 
