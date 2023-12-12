@@ -1,6 +1,9 @@
 ﻿using Food_Fate_BLL;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.Services.Description;
@@ -13,31 +16,11 @@ namespace CSE4050Project.Websites
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int userID = (int)Session["userID"];
-            dbBLL dbRef = new dbBLL();
-            List<string> favoriteRests = dbRef.getFavorite(userID);
-            List<string[]> allRestaraunts = new List<string[]>(); 
-            for (int i = 0; i < favoriteRests.Count; i++)
+            if (!IsPostBack)
             {
-                LookUp LU = new LookUp();
-                string[] restinfo = LU.BL(favoriteRests[i]).Result;
-                string[] neededInfo = { restinfo[1], restinfo[2], restinfo[3]/*, restinfo[4]*/ };
-                allRestaraunts.Add(neededInfo);
+                int userID = (int)Session["userID"];
+                BindData(userID);
             }
-            try
-            {
-                //List<BOService> service = dALService.Service.ToList();
-                if (allRestaraunts.Count > 0 && allRestaraunts != null)
-                {
-                    GridView1.DataSource = allRestaraunts;
-                    GridView1.DataBind();
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -66,6 +49,65 @@ namespace CSE4050Project.Websites
             else
             {
                 Response.Write("Unable to update user information.");
+            }
+        }
+
+        protected void Gridview1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string id = GridView1.DataKeys[e.RowIndex].Value.ToString();
+            int userID = (int)Session["userID"];
+
+            dbBLL dbRef = new dbBLL();
+            int res = dbRef.RemoveFavorite(userID, id);
+
+
+            BindData(userID);
+        }
+
+        private void BindData(int userID)
+        {
+            dbBLL dbRef = new dbBLL();
+            List<string> favoriteRests = dbRef.getFavorite(userID);
+
+            List<string[]> allRestaraunts = new List<string[]>();
+
+            for (int i = 0; i < favoriteRests.Count; i++)
+            {
+                LookUp LU = new LookUp();
+                string[] restinfo = LU.BL(favoriteRests[i]).Result;
+                string[] neededInfo = { favoriteRests[i], restinfo[1], restinfo[2], restinfo[3]/*, restinfo[4]*/ };
+                allRestaraunts.Add(neededInfo);
+            }
+
+            var dt = new DataTable();
+            var reID = dt.Columns.Add("rest_id", Type.GetType("System.String"));
+            var reName = dt.Columns.Add("rest_name", Type.GetType("System.String"));
+            var reLocation = dt.Columns.Add("rest_location", Type.GetType("System.String"));
+            var reRating = dt.Columns.Add("rest_rating", Type.GetType("System.String"));
+
+            for (int i = 0; i < favoriteRests.Count; i++)
+            {
+                var dr = dt.NewRow();
+                dr["rest_id"] = allRestaraunts[i][0];
+                dr["rest_name"] = allRestaraunts[i][1];
+                dr["rest_location"] = allRestaraunts[i][2];
+                dr["rest_rating"] = allRestaraunts[i][3];
+
+                dt.Rows.Add(dr);
+            }
+
+
+            try
+            {
+                if (allRestaraunts.Count > 0 && allRestaraunts != null)
+                {
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }
