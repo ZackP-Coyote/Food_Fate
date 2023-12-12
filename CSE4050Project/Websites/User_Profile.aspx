@@ -122,7 +122,36 @@
 
                     <div class="row">
                         <div class="col">
-                            <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
+                                <Columns>
+                                    <asp:TemplateField ItemStyle-Width="30px" HeaderText="Name">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblID" runat="server" Text='<%#Eval("rest_name")%>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField ItemStyle-Width="600px" HeaderText="Location">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblLocation" runat="server" Text='<%#Eval("rest_location")%>'></asp:Label>
+                                        </ItemTemplate>
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtLocation" runat="server" Text='<%#Eval("rest_location")%>'></asp:TextBox>
+                                        </EditItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField ItemStyle-Width="100px" HeaderText="Rating">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblRating" runat="server" Text='<%#Eval("rest_rating")%>'></asp:Label>
+                                        </ItemTemplate>
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtRating" runat="server" Text='<%#Eval("rest_location")%>'></asp:TextBox>
+                                        </EditItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lblRemove" runat="server" CommandArgument='<%# Eval("rest_name")%>' OnClientClick="return confirm('Do you want to delete?')" Text="Delete"></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
                         </div>
                     </div>
                 </div>
