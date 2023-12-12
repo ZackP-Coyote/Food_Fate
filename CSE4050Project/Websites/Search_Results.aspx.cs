@@ -11,6 +11,9 @@ namespace CSE4050Project.Websites
 {
     public partial class Search_Results : System.Web.UI.Page
     {
+        private string id1;
+        private string id2;
+        private string id3;
         protected void Page_Load(object sender, EventArgs e)
         {
             string ZipCity = Request.QueryString["city"];
@@ -27,19 +30,19 @@ namespace CSE4050Project.Websites
         
 
             //fetch id, name , image, and url from businessInfo
-            string id1 = businessInfo[0][0];
+            id1 = businessInfo[0][0];
             string name1 = businessInfo[0][1];
             string imageurl1 = businessInfo[0][4];
             string rating1 = businessInfo[0][3];
             string url1 = businessInfo[0][5];
 
-            string id2 = businessInfo[1][0];
+            id2 = businessInfo[1][0];
             string name2 = businessInfo[1][1];
             string imageurl2 = businessInfo[1][4];
             string rating2 = businessInfo[1][3];
             string url2 = businessInfo[1][5];
 
-            string id3 = businessInfo[2][0];
+            id3 = businessInfo[2][0];
             string name3 = businessInfo[2][1];
             string imageurl3 = businessInfo[2][4];
             string rating3 = businessInfo[2][3];
@@ -74,17 +77,23 @@ namespace CSE4050Project.Websites
 
         protected void FavoriteButton1_Click(object sender, EventArgs e)
         {
-
+            int userID = (int)Session["userID"];
+            dbBLL dbRef = new dbBLL();
+            int res = dbRef.setFavorite(userID, id1);
         }
 
         protected void FavoriteButton2_Click(object sender, EventArgs e)
         {
-
+            int userID = (int)Session["userID"];
+            dbBLL dbRef = new dbBLL();
+            int res = dbRef.setFavorite(userID, id2);
         }
 
         protected void FavoriteButton3_Click(object sender, EventArgs e)
         {
-
+            int userID = (int)Session["userID"];
+            dbBLL dbRef = new dbBLL();
+            int res = dbRef.setFavorite(userID, id3);
         }
     }
 }
