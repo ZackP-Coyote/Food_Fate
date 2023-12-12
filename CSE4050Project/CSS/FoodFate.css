@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+.response {
+    color:red;
+}
 /*
 header {
     position: fixed;
