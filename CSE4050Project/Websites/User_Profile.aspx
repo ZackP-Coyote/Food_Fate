@@ -129,13 +129,13 @@
                                             <asp:Label ID="lblID" runat="server" Text='<%#Eval("rest_id")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField ItemStyle-Width="30px" HeaderText="Name">
+                                    <asp:TemplateField ItemStyle-Width="150px" HeaderText="Name">
                                         <ItemTemplate>
                                             <asp:HyperLink ID="link" runat="server" Text = '<%# Eval("rest_name") %>'></asp:HyperLink>
                                             <%--<asp:Label ID="lblName" runat="server" Text='<%#Eval("rest_name")%>'></asp:Label>--%>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField ItemStyle-Width="600px" HeaderText="Location">
+                                    <asp:TemplateField ItemStyle-Width="480px" HeaderText="Location">
                                         <ItemTemplate>
                                             <asp:Label ID="lblLocation" runat="server" Text='<%#Eval("rest_location")%>'></asp:Label>
                                         </ItemTemplate>
