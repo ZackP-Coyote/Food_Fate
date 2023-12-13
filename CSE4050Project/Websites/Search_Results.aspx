@@ -106,7 +106,7 @@
                             </div>
 
                             <div class="col">
-                                <asp:Button ID="FavoriteButton1" runat="server" Text="Button" OnClick="FavoriteButton1_Click" />
+                                <asp:ImageButton ID="FavoriteButton1" runat="server" Height="75" Width="75" ImageUrl="~/Images/heart-outline.png" OnClick="FavoriteButton1_Click"/>
                             </div>
                        </center>
                     </div>
@@ -125,7 +125,7 @@
                             </div>
 
                             <div class="col">
-                                <asp:Button ID="FavoriteButton2" runat="server" Text="Button" OnClick="FavoriteButton2_Click" />
+                                <asp:ImageButton ID="FavoriteButton2" runat="server" Height="75" Width="75" ImageUrl="~/Images/heart-outline.png" OnClick="FavoriteButton2_Click" />
                             </div>
 
                         </center>
@@ -145,7 +145,7 @@
                             </div>
 
                             <div class="col">
-                                <asp:Button ID="FavoriteButton3" runat="server" Text="Button" OnClick="FavoriteButton3_Click" />
+                                <asp:ImageButton ID="FavoriteButton3" runat="server" Height="75" Width="75" ImageUrl="~/Images/heart-outline.png" OnClick="FavoriteButton3_Click"/>
                             </div>
                         </center>
                     </div>
