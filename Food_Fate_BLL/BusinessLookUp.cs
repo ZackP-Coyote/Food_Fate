@@ -13,7 +13,7 @@ public class LookUp
         string apiKey = GetMyKey.ApiKey();
 
         string businessId = args;
-        string baseUrl = "https://api.yelp.com/v3/" + businessId;
+        string baseUrl = "https://api.yelp.com/v3/businesses/" + businessId;
 
 
         using (HttpClient client = new HttpClient())
@@ -31,13 +31,13 @@ public class LookUp
             //get the information from the Api
             string id = businessDetails.Id;
             string name = businessDetails.Name;
-            //string address = businessDetails.Location.Address1;
+            string address = businessDetails.Location.Address1;
             string rating = businessDetails.Rating.ToString();
             string url = businessDetails.Url;
             string image = businessDetails.Image_url;
 
             //make into a string array
-            string[] businessInfo = { id, name/*, address*/, rating, url, image };
+            string[] businessInfo = { id, name, address, rating, url, image };
 
             //return the string array
             return businessInfo;

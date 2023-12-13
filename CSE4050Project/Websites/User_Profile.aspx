@@ -122,7 +122,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnRowDeleting="Gridview1_RowDeleting" DataKeyNames="rest_id">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnRowDeleting="Gridview1_RowDeleting" DataKeyNames="rest_id" onrowdatabound="GridView1_RowDataBound">
                                 <Columns>
                                     <asp:TemplateField ItemStyle-Width="30px" HeaderText="ID" Visible="False">
                                         <ItemTemplate>
@@ -131,7 +131,8 @@
                                     </asp:TemplateField>
                                     <asp:TemplateField ItemStyle-Width="30px" HeaderText="Name">
                                         <ItemTemplate>
-                                            <asp:Label ID="lblName" runat="server" Text='<%#Eval("rest_name")%>'></asp:Label>
+                                            <asp:HyperLink ID="link" runat="server" Text = '<%# Eval("rest_name") %>'></asp:HyperLink>
+                                            <%--<asp:Label ID="lblName" runat="server" Text='<%#Eval("rest_name")%>'></asp:Label>--%>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField ItemStyle-Width="600px" HeaderText="Location">
