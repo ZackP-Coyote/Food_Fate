@@ -102,7 +102,7 @@ namespace CSE4050Project.Websites
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FavoriteButton1;
+        protected global::System.Web.UI.WebControls.ImageButton FavoriteButton1;
 
         /// <summary>
         /// Restaurant_Image_2 control.
@@ -138,7 +138,7 @@ namespace CSE4050Project.Websites
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FavoriteButton2;
+        protected global::System.Web.UI.WebControls.ImageButton FavoriteButton2;
 
         /// <summary>
         /// Restaurant_Image_3 control.
@@ -174,6 +174,6 @@ namespace CSE4050Project.Websites
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FavoriteButton3;
+        protected global::System.Web.UI.WebControls.ImageButton FavoriteButton3;
     }
 }
