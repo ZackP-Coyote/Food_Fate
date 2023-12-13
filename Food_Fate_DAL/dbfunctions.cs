@@ -265,6 +265,27 @@ namespace Food_Fate_DAL
             }
         }
 
+        //returns 1 if restaurant already favorited. 0 if not
+        public int DBCheckFavorite(int userID, string favID)
+        {
+            using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DataCon"].ToString()))
+            {
+                using (var cmd = new MySqlCommand("select * from FavRest where userID=" + userID + " and restID='" + favID + "'", conn))
+                {
+                    conn.Open();
+                    var dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+        }
+
         //returns 1 if able to. returns 0 if not
         public int DBRemoveFavorite(int userID, string favID)
         {

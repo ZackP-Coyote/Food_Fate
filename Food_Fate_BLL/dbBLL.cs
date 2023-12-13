@@ -108,6 +108,14 @@ namespace Food_Fate_BLL
             return r;
         }
 
+        //returns 1 if restaurant already favorited. 0 if not
+        public int CheckFavorite(int userID, string favID)
+        {
+            dbfunctions df = new dbfunctions();
+            var r = df.DBCheckFavorite(userID, favID);
+            return r;
+        }
+
         //returns 1 if able to. returns 0 if not
         public int RemoveFavorite(int userID, string favID)
         {
