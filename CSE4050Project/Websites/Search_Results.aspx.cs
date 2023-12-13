@@ -17,6 +17,25 @@ namespace CSE4050Project.Websites
         private string id3;
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"] ==  null)
+                {
+                    FavoriteButton1.Visible = false;
+                    FavoriteButton2.Visible = false;
+                    FavoriteButton3.Visible = false;
+                }
+                else if (Session["role"].Equals("user"))
+                {
+                    FavoriteButton1.Visible = true;
+                    FavoriteButton2.Visible = true;
+                    FavoriteButton3.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("" + ex.Message + "");
+            }
             if (!IsPostBack)
             {
                 

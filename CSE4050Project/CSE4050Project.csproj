@@ -2214,6 +2214,8 @@
     <Content Include="Images\adminuser.png" />
     <Content Include="Images\background1.jpg" />
     <Content Include="Images\generaluser.png" />
+    <Content Include="Images\heart-outline.png" />
+    <Content Include="Images\heart.png" />
     <Content Include="Images\search-circle-sharp.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
