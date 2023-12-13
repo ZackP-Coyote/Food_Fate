@@ -127,21 +127,36 @@ namespace CSE4050Project.Websites
         {
             int userID = (int)Session["userID"];
             dbBLL dbRef = new dbBLL();
-            int res = dbRef.setFavorite(userID, id1);
+
+            int res1 = dbRef.CheckFavorite(userID, id1);
+            if (res1 == 1)
+            {
+                int res2 = dbRef.setFavorite(userID, id1);
+            }
         }
 
         protected void FavoriteButton2_Click(object sender, EventArgs e)
         {
             int userID = (int)Session["userID"];
             dbBLL dbRef = new dbBLL();
-            int res = dbRef.setFavorite(userID, id2);
+
+            int res1 = dbRef.CheckFavorite(userID, id2);
+            if (res1 == 1)
+            {
+                int res = dbRef.setFavorite(userID, id2);
+            }
         }
 
         protected void FavoriteButton3_Click(object sender, EventArgs e)
         {
             int userID = (int)Session["userID"];
             dbBLL dbRef = new dbBLL();
-            int res = dbRef.setFavorite(userID, id3);
+
+            int res1 = dbRef.CheckFavorite(userID, id3);
+            if (res1 == 1)
+            {
+                int res = dbRef.setFavorite(userID, id3);
+            }
         }
     }
 }
