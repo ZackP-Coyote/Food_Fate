@@ -272,6 +272,7 @@ namespace Food_Fate_DAL
             {
                 using (var cmd = new MySqlCommand("select * from FavRest where userID=" + userID + " and restID='" + favID + "'", conn))
                 {
+                    conn.Open();
                     var dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {

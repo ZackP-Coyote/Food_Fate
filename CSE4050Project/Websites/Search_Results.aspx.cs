@@ -17,6 +17,25 @@ namespace CSE4050Project.Websites
         private string id3;
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"] ==  null)
+                {
+                    FavoriteButton1.Visible = false;
+                    FavoriteButton2.Visible = false;
+                    FavoriteButton3.Visible = false;
+                }
+                else if (Session["role"].Equals("user"))
+                {
+                    FavoriteButton1.Visible = true;
+                    FavoriteButton2.Visible = true;
+                    FavoriteButton3.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("" + ex.Message + "");
+            }
             if (!IsPostBack)
             {
                 
@@ -141,7 +160,7 @@ namespace CSE4050Project.Websites
             dbBLL dbRef = new dbBLL();
 
             int res1 = dbRef.CheckFavorite(userID, id2);
-            if (res1 == 1)
+            if (res1 == 0)
             {
                 int res = dbRef.setFavorite(userID, id2);
             }
