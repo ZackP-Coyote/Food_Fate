@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.EnterpriseServices;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
@@ -14,6 +15,7 @@ namespace CSE4050Project.Websites
 {
     public partial class User_Profile : System.Web.UI.Page
     {
+        List<string> restUrls = new List<string>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -34,8 +36,7 @@ namespace CSE4050Project.Websites
             }
             else if (res == 1)
             {
-                /*currently having issues with this since it seems the old password textbox is not coded correctly. 
-                 also maybe have a check in the html or maybe even here to make sure both textbox2 and textbox4 are filled*/
+                /*currently having issues with this since it seems the old password textbox is not coded correctly.*/
                 int res2 = bLL.UpdatePassword(uID, TextBox2.Text.Trim(), TextBox4.Text.Trim());
                 if (res2 == 1)
                 {
@@ -75,7 +76,7 @@ namespace CSE4050Project.Websites
             {
                 LookUp LU = new LookUp();
                 string[] restinfo = LU.BL(favoriteRests[i]).Result;
-                string[] neededInfo = { favoriteRests[i], restinfo[1], restinfo[2], restinfo[3]/*, restinfo[4]*/ };
+                string[] neededInfo = { favoriteRests[i], restinfo[1], restinfo[2], restinfo[3], restinfo[4] };
                 allRestaraunts.Add(neededInfo);
             }
 
@@ -92,6 +93,7 @@ namespace CSE4050Project.Websites
                 dr["rest_name"] = allRestaraunts[i][1];
                 dr["rest_location"] = allRestaraunts[i][2];
                 dr["rest_rating"] = allRestaraunts[i][3];
+                restUrls.Add(allRestaraunts[i][4]);
 
                 dt.Rows.Add(dr);
             }
@@ -108,6 +110,20 @@ namespace CSE4050Project.Websites
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                HyperLink hl = (HyperLink)e.Row.FindControl("link");
+                if (hl != null)
+                {
+                    DataRowView drv = (DataRowView)e.Row.DataItem;
+                    int index = e.Row.RowIndex;
+                    hl.NavigateUrl = restUrls[index];
+                }
             }
         }
     }
