@@ -2231,10 +2231,10 @@
     <Content Include="Websites\Search_Results.aspx" />
     <Content Include="Websites\Admin_Login.aspx" />
     <Content Include="Websites\login.aspx" />
-    <Content Include="Websites\index.aspx" />
+    <Content Include="Websites\Main_Page.aspx" />
     <Content Include="Websites\Register.aspx" />
     <Content Include="Websites\Testing Purposes.aspx" />
-    <Content Include="Websites\index.html" />
+    <Content Include="Websites\Main_Page.html" />
     <Content Include="Websites\script.js" />
     <Content Include="Food_Fate.Master" />
     <Content Include="fontawesome\fontawesome-free-6.4.2-web\less\brands.less" />
@@ -2374,12 +2374,12 @@
     <Compile Include="Websites\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Websites\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Websites\Main_Page.aspx.cs">
+      <DependentUpon>Main_Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Websites\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Websites\Main_Page.aspx.designer.cs">
+      <DependentUpon>Main_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
